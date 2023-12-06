@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <div class="container">
+        <div id="login-container">
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="registration-container">
+            <form id="registration-form">
+                <input type="text" id="register-username" placeholder="New Username">
+                <input type="password" id="register-password" placeholder="New Password">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div id="task-list-container" style="display: none;">
+            <h2>Add Task</h2> 
+            <form id="add-task-form">
+                <input type="text" id="task-title" placeholder="Task title" required>
+                <select id="task-priority" required>
+                    <option value="" disabled selected>Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <input type="date" id="task-added-date" required>
+                <button type="submit">Add Task</button>
+            </form>
+            <button id="exit-button">Exit</button>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+    <script src="script/app.js"></script>
+</body>
+</html>
